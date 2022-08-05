@@ -22,7 +22,7 @@
 
 body {
     font-weight: 500;
-    font-family: ABCDiatype;
+    font-family: ABCDiatype, Verdana, Geneva, Tahoma, sans-serif;
     background-color: #8F8F91;
     color: black;
     letter-spacing: -1px;

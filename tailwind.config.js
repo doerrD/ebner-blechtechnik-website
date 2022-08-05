@@ -2,7 +2,11 @@
 module.exports = {
   content: ["index.html"],
   theme: {
-    extend: {},
+    extend: {
+      lineHeight: {
+        '5.5': '1.4rem',
+      }
+    },
   },
   plugins: [],
   
