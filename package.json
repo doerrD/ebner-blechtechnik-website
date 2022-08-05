@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "npx tailwindcss -i ./input.css -o ./css/site.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.7",
+    "connect": "3.7.0",
+    "serve-static": "1.14.2"
+  }
+}
