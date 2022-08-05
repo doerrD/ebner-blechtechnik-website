@@ -4,7 +4,7 @@ const templateFile = "./index.html";
 const controlFile = "./css/site.min.css";
 
 const version = fs.statSync(controlFile).mtimeMs;
-const replacement = `href="/css/site.min.css?v=${version}"`;
+const replacement = `href="/css/site.min.css?v=${version}" rel="stylesheet"`;
 
 const searchRegex = /href=\"\/css\/site\.css.*\"/g;
 

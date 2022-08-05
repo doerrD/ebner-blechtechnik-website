@@ -40,6 +40,7 @@ ul.arrow li {
 }
 
 ul.arrow li::before {
-    content: "🡪";
+    font-family: Verdana;
+    content: "\1F86A";
     font-size: 1rem;
 }

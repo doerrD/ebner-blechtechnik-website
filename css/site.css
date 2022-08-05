@@ -660,12 +660,12 @@ video {
   font-style: normal;
 }
 
-.leading-5 {
-  line-height: 1.25rem;
-}
-
 .leading-5\.5 {
   line-height: 1.4rem;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
 }
 
 .underline {
@@ -719,7 +719,8 @@ ul.arrow li {
 }
 
 ul.arrow li::before {
-  content: "🡪";
+  font-family: Verdana;
+  content: "\1F86A";
   font-size: 1rem;
 }
 
