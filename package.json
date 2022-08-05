@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "npx tailwindcss -i ./input.css -o ./css/site.css --watch"
+    "start": "npx tailwindcss -i ./input.css -o ./css/site.css --watch",
+    "build": "npx tailwindcss -i ./input.css -o ./css/site.min.css --minify && node add-version-postfix.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.1.7",
