@@ -40,7 +40,7 @@ ul.arrow li {
 }
 
 ul.arrow li::before {
-    font-family: Verdana;
+    font-family: 'Zapf Dingbats';
     content: "\1F86A";
     font-size: 1rem;
 }
