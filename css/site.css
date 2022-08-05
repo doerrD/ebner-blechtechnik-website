@@ -719,8 +719,7 @@ ul.arrow li {
 }
 
 ul.arrow li::before {
-  font-family: Verdana;
-  content: "\1F86A";
+  content: url('../img/arrow.png');
   font-size: 1rem;
 }
 
