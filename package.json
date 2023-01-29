@@ -1,11 +1,10 @@
 {
-  "scripts": {
-    "start": "npx tailwindcss -i ./input.css -o ./css/site.css --watch",
-    "build": "npx tailwindcss -i ./input.css -o ./css/site.min.css --minify && node add-version-postfix.js"
-  },
-  "devDependencies": {
-    "tailwindcss": "3.1.8",
-    "connect": "3.7.0",
-    "serve-static": "1.15.0"
+    "scripts": {
+      "start": "npx tailwindcss -i ./input.css -o ./static/css/site.css --watch",
+      "tw:build": "npx tailwindcss -i ./input.css -o ./static/css/site.min.css",
+      "build": "zola build"
+    },
+    "devDependencies": {
+      "tailwindcss": "3.2.4"
+    }
   }
-}
