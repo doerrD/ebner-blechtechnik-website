@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="p-4 md:py-4 md:px-16">
-    <div class="grid grid-cols-12 gap-4 w-full mb-44">
-        <div class="col-span-2 text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 w-full mb-20 md:mb-44">
+        <div class="col-span-2 text-xl order-last md:order-first">
             <ul>
                 <li><a class="underline" href="https://www.google.com/maps/place/EBNER+Blechtechnik+GmbH/@48.1102485,14.101985,15z/data=!4m2!3m1!1s0x0:0xd47ecb407178d6b5?sa=X&ved=2ahUKEwit8pbZ2ff8AhXSSfEDHYVRDYYQ_BJ6BAhSEAg" target="_blank">Google Maps</a></li>
                 <li><a class="underline" href="https://www.facebook.com/profile.php?id=100083931709437" target="_blank">Facebook</a></li>
@@ -23,7 +23,7 @@
     </div>
     <div>
         {{ $image := .Resources.GetMatch "contact.webp" }}
-        <img class="mb-16" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+        <img class="mb-8 md:mb-16" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
     </div>
 </div>
 {{ end }}

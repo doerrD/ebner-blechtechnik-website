@@ -1,3 +1,99 @@
 {{ define "main" }}
-<h1>Leistungen</h1>
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-20 md:mb-44">
+        <div class="col-span-2 text-xl">
+            Perfektion ist unser Standard.
+        </div>
+        <div class="col-span-8 text-3xl md:text-4xl">
+            Darum ist alles exakt. Exakt geschnitten für Sie.
+            Für Ihre Bedürfnisse. Jeder Schnitt nach Maß, wie vereinbart.
+            Natürlich in bester Qualität. Ganz genau. Immer. Effizient.
+            Engagiert. Zuverlässig. Termintreu. Wie eben ein verlässlicher 
+            Partner ist. Ein verlässlicher Partner für Lohnfertigung von 
+            Einzelteilen bis hin zu Serien. Ein langfristiger Partner für:
+        </div>
+    </div>
+</section>
+
+<hr class="border-black border-1" />
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
+        <div class="col-span-6 text-xl">
+            <h2 class="mb-8">Laserzuschnitt</h2>
+            <p class="mb-8">
+                Unser vollautomatisierter 2D-Fiber-Laser TruLaser 3030
+                der Marke TRUMPF schneidet von Baustahl über Edelstahl bis
+                hin zu hoch reflektiven Materialien wie Kupfer und
+                Aluminium. Wir lasern Bleche in Großformat, Mittelformat
+                und Kleinformat
+            </p>
+            <p>
+                <h3>Blechstärken:</h3>
+                <ul class="max-w-sm">
+                    <li class="flex justify-between"><div>Stahl</div><div>25 mm</div></li>
+                    <li class="flex justify-between"><div>Edelstahl</div><div>25 mm</div></li>
+                    <li class="flex justify-between"><div>Aluminium</div><div>25 mm</div></li>
+                    <li class="flex justify-between"><div>Kupfer</div><div>10 mm</div></li>
+                    <li class="flex justify-between"><div>Messing</div><div>10 mm</div></li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-span-6 md:px-8">
+            {{ $image := .Resources.GetMatch "laserzuschnitt.webp" }}
+            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+        </div>
+    </div>
+</section>
+
+<hr class="border-black border-1" />
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
+        <div class="col-span-6 text-xl">
+            <h2 class="mb-8">Stanzzuschnitt</h2>
+            <p class="mb-8">
+                Stanzen ist weit mehr als Bleche lochen. Unsere
+                vollautomatisierte Stanzmaschine TruPunch 1000 eröffnet
+                durch die Fülle an Werkzeugmöglichkeiten neue
+                Dimensionen. So können Teile mit zum Beispiel
+                Umformungen oder Gewinden auf einer Maschine komplett gefertigt werden.
+            </p>
+            <ul class="max-w-sm">
+                <li class="flex justify-between"><div>Blechstärken:</div><div>max. 6 mm</div></li>
+            </ul>
+        </div>
+        <div class="col-span-6 md:px-8">
+            {{ $image := .Resources.GetMatch "laserzuschnitt.webp" }}
+            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+        </div>
+    </div>
+</section>
+
+<hr class="border-black border-1" />
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
+        <div class="col-span-6 text-xl">
+            <h2 class="mb-8">Abkanten</h2>
+            <p class="mb-8">
+                Unsere TrumaBend V130X bringt ihre Blechteile in Form.
+                Egal ob einfache Geometrie oder komplexe Präzisionsteile.
+            </p>
+            <p>
+                <ul class="max-w-sm">
+                    <li class="flex justify-between"><div>Max. Kantlänge:</div><div>3 m</div></li>
+                    <li class="flex justify-between"><div>Max. Presskraft:</div><div>130 t</div></li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-span-6 md:px-8">
+            {{ $image := .Resources.GetMatch "laserzuschnitt.webp" }}
+            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+        </div>
+    </div>
+</section>
+
+{{- partial "knowEachOther.html" . -}}
+
 {{ end }}

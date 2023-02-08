@@ -9,22 +9,11 @@
         </div>
     </div>
     <div>
-        {{ $image := .Resources.GetMatch "contact.webp" }}
+        {{ $image := .Resources.GetMatch "ueberuns.webp" }}
         <img class="mb-16" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
     </div>
 </div>
-<hr class="border-black border-1" />
-<div class="p-4 md:py-4 md:px-16">
-    <h3 class="text-2xl mb-8">Lernen wir uns kennen.</h3>
-    <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-2">
-            Ebner Christoph<br />
-            Geschäftsführer
-        </div>
-        <ul class="arrow col-span-8">
-            <li>{{ $.Site.Params.Phone }}</li>
-            <li>{{ $.Site.Params.Mail }}</li>
-        </ul>
-    </div>
-</div>
+
+{{- partial "knowEachOther.html" . -}}
+
 {{ end }}
