@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
+        <div class="col-span-2 text-xl">
+            Medieninhaber, Autor und Herausgeber
+        </div>
+        <div class="col-span-8 text-2xl text-justify md:text-left">
+            <address class="not-italic mb-8">
+                {{ $.Site.Title }}<br />
+                {{ $.Site.Params.Street }}<br />
+                {{ $.Site.Params.ZipCode }} {{ $.Site.Params.City }}
+            </address>
+            <ul>
+                <li>{{ $.Site.Params.Phone }}</li>
+                <li>{{ $.Site.Params.Mail }}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
+        <div class="col-span-2 text-xl">
+            Unternehmensdaten
+        </div>
+        <div class="col-span-8 text-2xl text-justify md:text-left">
+            <ul>
+                <li>Firmenbuchnummer: FN 578974 h</li>
+                <li>Firmenbuchgericht: Landesgericht Wels</li>
+                <li>UID-Nummer: ATU 780 904 05</li>
+                <li>WKO-Mitgliedschaft: Landesinnung Metalltechniker</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
+        <div class="col-span-2 text-xl">
+            Informationspflicht lt. ECG
+        </div>
+        <div class="col-span-8 text-2xl text-justify md:text-left">
+            {{ $image := .Resources.GetMatch "ecg.gif" }}
+            <a href="https://firmen.wko.at/ebner-blechtechnik-gmbh-lohnfertigung-von-blechkomponenten/ober%c3%b6sterreich/?firmaid=4a819611-9026-4ade-8c97-761f600bf246"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></a>
+        </div>
+    </div>
+</section>
+{{ end }}

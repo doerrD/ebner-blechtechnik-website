@@ -1,10 +1,10 @@
 {{ define "main" }}
 <section class="p-4 md:py-4 md:px-16">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-20 md:mb-44">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-12 md:mb-32">
         <div class="col-span-2 text-xl">
             Perfektion ist unser Standard.
         </div>
-        <div class="col-span-8 text-3xl md:text-4xl">
+        <div class="col-span-8 text-2xl md:text-4xl text-justify md:text-left">
             Darum ist alles exakt. Exakt geschnitten für Sie.
             Für Ihre Bedürfnisse. Jeder Schnitt nach Maß, wie vereinbart.
             Natürlich in bester Qualität. Ganz genau. Immer. Effizient.
@@ -17,11 +17,11 @@
 
 <hr class="border-black border-1" />
 
-<section class="p-4 md:py-4 md:px-16">
+<section class="p-4 md:py-4 md:px-16" id="laserzuschnitt">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
         <div class="col-span-6 text-xl">
             <h2 class="mb-8">Laserzuschnitt</h2>
-            <p class="mb-8">
+            <p class="mb-8 text-justify md:text-left">
                 Unser vollautomatisierter 2D-Fiber-Laser TruLaser 3030
                 der Marke TRUMPF schneidet von Baustahl über Edelstahl bis
                 hin zu hoch reflektiven Materialien wie Kupfer und
@@ -40,19 +40,27 @@
             </p>
         </div>
         <div class="col-span-6 md:px-8">
-            {{ $image := .Resources.GetMatch "laserzuschnitt.webp" }}
+            {{ $image := .Resources.GetMatch "laserzuschnitt_2.webp" }}
             <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                {{ $image2 := .Resources.GetMatch "laserzuschnitt.webp" }}
+                <img class="w-full max-h-28" src="{{ $image2.RelPermalink }}" width="{{ $image2.Width }}" height="{{ $image2.Height }}">
+                {{ $image3 := .Resources.GetMatch "laserzuschnitt_3.webp" }}
+                <img class="w-full max-h-28" src="{{ $image3.RelPermalink }}" width="{{ $image3.Width }}" height="{{ $image3.Height }}">
+                {{ $image4 := .Resources.GetMatch "laserzuschnitt_4.webp" }}
+                <img class="w-full max-h-28" src="{{ $image4.RelPermalink }}" width="{{ $image4.Width }}" height="{{ $image4.Height }}">                
+            </div>
         </div>
     </div>
 </section>
 
 <hr class="border-black border-1" />
 
-<section class="p-4 md:py-4 md:px-16">
+<section class="p-4 md:py-4 md:px-16" id="stanzzuschnitt">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
         <div class="col-span-6 text-xl">
             <h2 class="mb-8">Stanzzuschnitt</h2>
-            <p class="mb-8">
+            <p class="mb-8 text-justify md:text-left">
                 Stanzen ist weit mehr als Bleche lochen. Unsere
                 vollautomatisierte Stanzmaschine TruPunch 1000 eröffnet
                 durch die Fülle an Werkzeugmöglichkeiten neue
@@ -64,19 +72,27 @@
             </ul>
         </div>
         <div class="col-span-6 md:px-8">
-            {{ $image := .Resources.GetMatch "laserzuschnitt.webp" }}
-            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+            {{ $stanzImage := .Resources.GetMatch "stanzzuschnitt_1.webp" }}
+            <img src="{{ $stanzImage.RelPermalink }}" width="{{ $stanzImage.Width }}" height="{{ $stanzImage.Height }}">
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                {{ $stanzImage2 := .Resources.GetMatch "stanzzuschnitt_2.webp" }}
+                <img class="w-full max-h-28" src="{{ $stanzImage2.RelPermalink }}" width="{{ $stanzImage2.Width }}" height="{{ $stanzImage2.Height }}">
+                {{ $stanzImage3 := .Resources.GetMatch "stanzzuschnitt_3.webp" }}
+                <img class="w-full max-h-28" src="{{ $stanzImage3.RelPermalink }}" width="{{ $stanzImage3.Width }}" height="{{ $stanzImage3.Height }}">
+                {{ $stanzImage4 := .Resources.GetMatch "stanzzuschnitt_4.webp" }}
+                <img class="w-full max-h-28" src="{{ $stanzImage4.RelPermalink }}" width="{{ $stanzImage4.Width }}" height="{{ $stanzImage4.Height }}">                
+            </div>
         </div>
     </div>
 </section>
 
 <hr class="border-black border-1" />
 
-<section class="p-4 md:py-4 md:px-16">
+<section class="p-4 md:py-4 md:px-16" id="abkanten">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
         <div class="col-span-6 text-xl">
             <h2 class="mb-8">Abkanten</h2>
-            <p class="mb-8">
+            <p class="mb-8 text-justify md:text-left">
                 Unsere TrumaBend V130X bringt ihre Blechteile in Form.
                 Egal ob einfache Geometrie oder komplexe Präzisionsteile.
             </p>
@@ -88,8 +104,16 @@
             </p>
         </div>
         <div class="col-span-6 md:px-8">
-            {{ $image := .Resources.GetMatch "laserzuschnitt.webp" }}
-            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+            {{ $abkantenImage := .Resources.GetMatch "abkanten_1.webp" }}
+            <img src="{{ $abkantenImage.RelPermalink }}" width="{{ $abkantenImage.Width }}" height="{{ $abkantenImage.Height }}">
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                {{ $abkantenImage2 := .Resources.GetMatch "abkanten_2.webp" }}
+                <img class="w-full max-h-28" src="{{ $abkantenImage2.RelPermalink }}" width="{{ $abkantenImage2.Width }}" height="{{ $abkantenImage2.Height }}">
+                {{ $abkantenImage3 := .Resources.GetMatch "abkanten_3.webp" }}
+                <img class="w-full max-h-28" src="{{ $abkantenImage3.RelPermalink }}" width="{{ $abkantenImage3.Width }}" height="{{ $abkantenImage3.Height }}">
+                {{ $abkantenImage4 := .Resources.GetMatch "abkanten_4.webp" }}
+                <img class="w-full max-h-28" src="{{ $abkantenImage4.RelPermalink }}" width="{{ $abkantenImage4.Width }}" height="{{ $abkantenImage4.Height }}">                
+            </div>
         </div>
     </div>
 </section>

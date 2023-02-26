@@ -1,18 +1,44 @@
 {{ define "main" }}
-<div class="p-4 md:py-4 md:px-16">
-    <div class="grid grid-cols-12 gap-4 w-full mb-44">
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-12 md:mb-32">
         <div class="col-span-2 text-xl">
             Tradtion neu geschnitten.
         </div>
-        <div class="col-span-8 text-4xl">
-
+        <div class="col-span-8 text-2xl md:text-4xl">
+            <div class="mb-8">
+                22 Jahre internationale Branchenerfahrung liegen hinter mir. 
+                22 Jahre, die mir tiefe Einblicke in unterschiedlichste Unternehmen 
+                ermöglichten. Die mich inspirierten. 
+                22 Jahre, die mir gezeigt haben, wer ich bin und was mir wichtig ist. 
+                Wer ich für meine Kunden sein möchte.
+            </div>
+            <div class="mb-8">
+                Nämlich ein langjähriger Partner auf den immer Verlass ist, 
+                für den Kundenzufriedenheit oberste Priorität hat. Ein Professionist, 
+                der für höchste Qualität, Flexibilität und Zuverlässigkeit steht. 
+                Ein Produzent, der mitdenkt, die Initiative ergreift und performt. 
+                Ein bodenständiger Mensch, dessen Herz für Familie und Tradition schlägt, 
+                der stets nach Weiterentwicklung und Verbesserung strebt. 
+                Ein Unternehmer, der für starke Beziehungen und eine langfristige, 
+                sichere Zukunft steht.
+            </div>
+            <div class="bg-black text-white p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 shadow-md">
+                <div>
+                    {{ $image := .Resources.GetMatch "ebner_c.webp" }}
+                    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+                </div>
+                <div>
+                    <h4>Christoph Ebner</h4>
+                    <p class="text-2xl">Geschäftsführer</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div>
+    <!-- <div>
         {{ $image := .Resources.GetMatch "ueberuns.webp" }}
         <img class="mb-16" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
-    </div>
-</div>
+    </div> -->
+</section>
 
 {{- partial "knowEachOther.html" . -}}
 

@@ -3,7 +3,7 @@ languageCode = "de-AT"
 title = 'EBNER Blechtechnik GmbH'
 theme = 'myTheme'
 [params]
-  street = 'Gewerbepark Ost 11'
+  street = 'Gewerbepark Ost 12'
   zipCode = "4621"
   city = "Sipbachzell"
   phone = "+43 664 416 22 35"

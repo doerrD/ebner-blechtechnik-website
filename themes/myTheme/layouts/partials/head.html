@@ -13,4 +13,56 @@
     <title>{{ $.Site.Title }}</title>
     <meta name="description" content="{{ $.Page.Description }}" />
     <meta name="keywords" content="Ebner, Blechtechnik, Christoph Ebner, Blech, Lasern, Laserzuschnitt, Stanzen, Abkanten, Lohnfertiger, Lohnfertigung, Zuschnitt " />
+
+    <script>
+        (function(d, s, id, w, f){
+            w[f] = w[f] || function() {
+                (w[f].q = w[f].q || []).push(arguments)
+            };
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)){ return; }
+            js = d.createElement(s); js.id = id;
+            js.onload = function(){
+                // remote script has loaded
+            };
+            js.async = true;
+            js.src = "https://cdn.trackboxx.info/p/tracker.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'trackboxx-script', window, 'trackboxx'));
+        trackboxx('set', 'siteId', 'TB-32923525');
+        trackboxx('trackPageview');
+    </script>
+
+    <script type="application/ld+json">
+        { "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ebner Blechtechnik GmbH",
+        "legalName" : "Ebner Blechtechnik GmbH",
+        "url": "https://www.ebner-blechtechnik.at/",
+        "logo": "https://www.ebner-blechtechnik.at/img/logo.png",
+        "foundingDate": "2022",
+        "founders": [
+        {
+        "@type": "Person",
+        "name": "Christoph Ebner"
+        }],
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gewerbepark Ost 11",
+        "addressLocality": "Sipbachzell",
+        "addressRegion": "Oberösterreich",
+        "postalCode": "4621",
+        "addressCountry": "Austria"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Geschäftsführer",
+            "telephone": "[+43 664 41 62 235]",
+            "email": "office@ebner-blechtechnik.at"
+        },
+        "sameAs": [ 
+        "https://www.facebook.com/Ebner-Blechtechnik-GmbH-100989389383313",
+        "https://www.linkedin.com/company/ebner-blechtechnik-gmbh/"
+        ]}
+    </script>
 </head>

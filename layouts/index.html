@@ -1,3 +1,25 @@
 {{ define "main" }}
 
+<div class="p-4 md:py-4 md:px-16">
+    <div class="text-2xl mt-12 leading-5.5 md:text-4xl md:leading-9">
+        Jeder Schnitt nach Maß. Natürlich in bester Qualität. Ganz genau. Immer. Ebner Blechtechnik.
+        Ein verlässlicher Partner für Lohnfertigung von Einzelteilen bis hin zu Serien. Ein langfristiger Partner.
+        Effizient. Engagiert. Zuverlässig. Termintreu. Exakt. Mit jedem Schnitt. Mit jeder Kante. Mit jedem Wort.
+    </div>
+    <div class="text-xl mt-6 leading-5.5 flex flex-col md:pl-24 md:mt-28 md:flex-row mb-28 md:mb-28">
+        <ul class="w-72 relative">
+            <li>Der perfekte Schnitt.</li>
+            <li>Die perfekte Kante.</li>
+            <li>Ohne Kompromiss</li>
+        </ul>
+        <ul class="arrow mt-20 mr-8 md:mt-0 right-0 absolute md:relative">
+            <li><a href="{{ .Site.BaseURL }}/leistungen#laserzuschnitt">Laserzuschnitt</a></li>
+            <li><a href="{{ .Site.BaseURL }}/leistungen#stanzzuschnitt">Stanzzuschnitt</a></li>
+            <li><a href="{{ .Site.BaseURL }}/leistungen#abkanten">Abkanten</a></li>
+        </ul>
+    </div>
+</div>
+
+{{- partial "knowEachOther.html" . -}}
+
 {{ end }}
