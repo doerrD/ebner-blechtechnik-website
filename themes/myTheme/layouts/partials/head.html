@@ -8,6 +8,8 @@
     <link rel="mask-icon" href="{{ .Site.BaseURL }}/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}js/photoswipe/photoswipe.css">
+
     {{ $style := resources.Get "style.css" }}    
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
     <title>{{ $.Site.Title }}</title>
@@ -32,6 +34,21 @@
         trackboxx('set', 'siteId', 'TB-32923525');
         trackboxx('trackPageview');
     </script>
+
+    {{ $baseURL := .Site.BaseURL }}
+    {{ if .Params.galleryIds }}
+        {{ range .Params.galleryIds }}
+            <script type="module">
+                import PhotoSwipeLightbox from '{{ $baseURL }}js/photoswipe/photoswipe-lightbox.esm.js';
+                const lightbox = new PhotoSwipeLightbox({
+                    gallery: '#{{ . }}',
+                    children: 'a',
+                    pswpModule: () => import('{{ $baseURL }}js/photoswipe/photoswipe.esm.js')
+                });
+                lightbox.init();
+            </script>
+        {{ end }}
+    {{ end }}
 
     <script type="application/ld+json">
         { "@context": "https://schema.org",

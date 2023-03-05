@@ -6,7 +6,7 @@
         </div>
         <div class="col-span-8 text-2xl text-justify md:text-left">
             <address class="not-italic mb-8">
-                {{ $.Site.Title }}<br />
+                {{ $.Site.Params.Company }}<br />
                 {{ $.Site.Params.Street }}<br />
                 {{ $.Site.Params.ZipCode }} {{ $.Site.Params.City }}
             </address>
@@ -25,9 +25,9 @@
         </div>
         <div class="col-span-8 text-2xl text-justify md:text-left">
             <ul>
-                <li>Firmenbuchnummer: FN 578974 h</li>
+                <li>Firmenbuchnummer: {{ $.Site.Params.Fbn }}</li>
                 <li>Firmenbuchgericht: Landesgericht Wels</li>
-                <li>UID-Nummer: ATU 780 904 05</li>
+                <li>UID-Nummer: {{ $.Site.Params.Uid }}</li>
                 <li>WKO-Mitgliedschaft: Landesinnung Metalltechniker</li>
             </ul>
         </div>
@@ -45,4 +45,71 @@
         </div>
     </div>
 </section>
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
+        <div class="col-span-2 text-xl">
+            Verweise und Links
+        </div>
+        <div class="col-span-8 text-2xl text-justify md:text-left">
+            <p class="mb-4">
+                Bei direkten oder indirekten Verweisen auf fremde Internetseiten („Links“), die außerhalb des Verantwortungsbereiches 
+                des Medieninhabers liegen, wird keinerlei Haftungsverpflichtung übernommen.
+            </p>
+            <p>
+                Die {{ $.Site.Params.Company }} erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen 
+                Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, 
+                die Inhalte oder die Urheberschaft der gelinkten/verknüpften Seiten hat der Medieninhaber keinerlei 
+                Einfluss. Deshalb distanziert er sich hiermit ausdrücklich von allen Inhalten aller 
+                gelinkten/verknüpften Seiten, die nach der Linksetzung verändert wurden. Diese Feststellung 
+                gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise. Für illegale, 
+                fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder 
+                Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, 
+                auf die verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
+        <div class="col-span-2 text-xl">
+            Urheber- und Kennzeichenrecht
+        </div>
+        <div class="col-span-8 text-2xl text-justify md:text-left">
+            <p class="mb-4">
+                Die {{ $.Site.Params.Company }} ist bestrebt in allen Publikationen die Urheberrechte der verwendeten Grafiken, Tondokumente,
+                Videosequenzen und Texte zu beachten, vom Medieninhaber selbst erstellte Grafiken, Tondokumente, Videosequenzen
+                und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zurückzugreifen.
+                Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen
+                unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten
+                der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen,
+                dass Markenzeichen nicht durch Rechte Dritter geschützt sind.
+            </p>
+            <p>
+                Das Copyright für veröffentlichte, vom Medieninhaber selbst erstellte Objekte bleibt allein bei der
+                {{ $.Site.Params.Company }}. Eine Vervielfältigung oder Verwendung solcher Grafiken, Tondokumente,
+                Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist
+                ohne ausdrückliche Zustimmung des Autors nicht gestattet.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
+        <div class="col-span-2 text-xl">
+            Rechtswirksamkeit dieses Haftungsausschlusses
+        </div>
+        <div class="col-span-8 text-2xl text-justify md:text-left">
+            <p class="mb-4">
+                Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf
+                diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes 
+                Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen
+                Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.
+            </p>
+        </div>
+    </div>
+</section>
+
 {{ end }}
