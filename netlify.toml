@@ -19,9 +19,9 @@ HUGO_ENABLEGITINFO = "true"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = '''
-      max-age=63072000;
-      includeSubDomains;
-      preload'''
+    max-age=63072000;
+    includeSubDomains;
+    preload'''
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' cdn.trackboxx.info; img-src 'self' hit.trackboxx.info; connect-src 'self' hit.trackboxx.info;"
     Referrer-Policy = "no-referrer-when-downgrade"

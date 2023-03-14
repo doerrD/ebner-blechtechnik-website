@@ -537,10 +537,6 @@ video {
   grid-column: span 8 / span 8;
 }
 
-.col-span-6 {
-  grid-column: span 6 / span 6;
-}
-
 .col-span-5 {
   grid-column: span 5 / span 5;
 }
@@ -848,6 +844,18 @@ h2 {
 
   .md\:order-first {
     order: -9999;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .md\:col-span-6 {
+    grid-column: span 6 / span 6;
   }
 
   .md\:col-span-3 {

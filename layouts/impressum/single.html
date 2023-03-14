@@ -1,10 +1,10 @@
 {{ define "main" }}
 <section class="p-4 md:py-4 md:px-16">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
-        <div class="col-span-2 text-xl break-words">
+        <div class="md:col-span-2 text-xl break-words">
             Medieninhaber, Autor und Herausgeber
         </div>
-        <div class="col-span-8 text-2xl text-justify md:text-left">
+        <div class="md:col-span-8 text-2xl text-justify md:text-left">
             <address class="not-italic mb-8">
                 {{ $.Site.Params.Company }}<br />
                 {{ $.Site.Params.Street }}<br />
@@ -20,10 +20,10 @@
 
 <section class="p-4 md:py-4 md:px-16">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
-        <div class="col-span-2 text-xl break-words">
+        <div class="md:col-span-2 text-xl break-words">
             Unternehmensdaten
         </div>
-        <div class="col-span-8 text-2xl text-justify md:text-left">
+        <div class="md:col-span-8 text-2xl text-justify md:text-left">
             <ul>
                 <li>Firmenbuchnummer: {{ $.Site.Params.Fbn }}</li>
                 <li>Firmenbuchgericht: Landesgericht Wels</li>
@@ -36,10 +36,10 @@
 
 <section class="p-4 md:py-4 md:px-16">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
-        <div class="col-span-2 text-xl break-words">
+        <div class="md:col-span-2 text-xl break-words">
             Informationspflicht lt. ECG
         </div>
-        <div class="col-span-8 text-2xl text-justify md:text-left">
+        <div class="md:col-span-8 text-2xl text-justify md:text-left">
             {{ $image := .Resources.GetMatch "ecg.gif" }}
             <a href="https://firmen.wko.at/ebner-blechtechnik-gmbh-lohnfertigung-von-blechkomponenten/ober%c3%b6sterreich/?firmaid=4a819611-9026-4ade-8c97-761f600bf246"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></a>
         </div>
@@ -48,10 +48,10 @@
 
 <section class="p-4 md:py-4 md:px-16">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
-        <div class="col-span-2 text-xl break-words">
+        <div class="md:col-span-2 text-xl break-words">
             Verweise und Links
         </div>
-        <div class="col-span-8 text-2xl text-justify md:text-left">
+        <div class="md:col-span-8 text-2xl text-justify md:text-left">
             <p class="mb-4">
                 Bei direkten oder indirekten Verweisen auf fremde Internetseiten („Links“), die außerhalb des Verantwortungsbereiches 
                 des Medieninhabers liegen, wird keinerlei Haftungsverpflichtung übernommen.
@@ -73,10 +73,10 @@
 
 <section class="p-4 md:py-4 md:px-16">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
-        <div class="col-span-2 text-xl break-words">
+        <div class="md:col-span-2 text-xl break-words">
             Urheber- und Kennzeichenrecht
         </div>
-        <div class="col-span-8 text-2xl text-justify md:text-left">
+        <div class="md:col-span-8 text-2xl text-justify md:text-left">
             <p class="mb-4">
                 Die {{ $.Site.Params.Company }} ist bestrebt in allen Publikationen die Urheberrechte der verwendeten Grafiken, Tondokumente,
                 Videosequenzen und Texte zu beachten, vom Medieninhaber selbst erstellte Grafiken, Tondokumente, Videosequenzen
@@ -98,10 +98,10 @@
 
 <section class="p-4 md:py-4 md:px-16">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-4">
-        <div class="col-span-2 text-xl break-words">
+        <div class="md:col-span-2 text-xl break-words">
             Rechtswirksamkeit dieses Haftungsausschlusses
         </div>
-        <div class="col-span-8 text-2xl text-justify md:text-left">
+        <div class="md:col-span-8 text-2xl text-justify md:text-left">
             <p class="mb-4">
                 Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf
                 diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes 
