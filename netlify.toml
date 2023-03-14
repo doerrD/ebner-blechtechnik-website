@@ -23,5 +23,5 @@ HUGO_ENABLEGITINFO = "true"
       includeSubDomains;
       preload'''
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'cdn.trackboxx.info';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' cdn.trackboxx.info;"
     Referrer-Policy = "no-referrer-when-downgrade"
