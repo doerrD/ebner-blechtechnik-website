@@ -1,4 +1,4 @@
-baseURL = "https://www.ebner-blechtechnik.at/"
+baseURL = "https://www.ebner-blechtechnik.at"
 languageCode = "de-AT"
 title = 'EBNER Blechtechnik GmbH'
 theme = 'myTheme'
