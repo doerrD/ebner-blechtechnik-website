@@ -1,0 +1,27 @@
+baseURL = "http://localhost:1313/"
+languageCode = "de-AT"
+title = 'EBNER Blechtechnik GmbH'
+theme = 'myTheme'
+[params]
+  company = "EBNER Blechtechnik GmbH"
+  street = 'Gewerbepark Ost 12'
+  zipCode = "4621"
+  city = "Sipbachzell"
+  phone = "+43 664 416 22 35"
+  mail = "office@ebner-blechtechnik.at"
+  Uid = "ATU 780 904 05"
+  Fbn = "FN 578974 h"
+
+[menu]
+  [[menu.nav]]
+    name = "Leistungen"
+    url = "/Leistungen"
+    weight = 1
+  [[menu.nav]]
+    name = "Über uns"
+    url = "/UeberUns"
+    weight = 2
+  [[menu.nav]]
+    name = "Kontakt"
+    url = "/Kontakt"
+    weight = 3

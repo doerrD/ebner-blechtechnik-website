@@ -1,0 +1,141 @@
+{{ define "main" }}
+<section class="p-4 md:py-4 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-12 md:mb-32">
+        <div class="col-span-2 text-xl">
+            Perfektion ist unser Standard.
+        </div>
+        <div class="col-span-8 text-2xl md:text-4xl text-justify md:text-left">
+            Darum ist alles exakt. Exakt geschnitten für Sie.
+            Für Ihre Bedürfnisse. Jeder Schnitt nach Maß, wie vereinbart.
+            Natürlich in bester Qualität. Ganz genau. Immer. Effizient.
+            Engagiert. Zuverlässig. Termintreu. Wie eben ein verlässlicher 
+            Partner ist. Ein verlässlicher Partner für Lohnfertigung von 
+            Einzelteilen bis hin zu Serien. Ein langfristiger Partner für:
+        </div>
+    </div>
+</section>
+
+<hr class="border-black border-1" />
+
+<section class="p-4 md:py-4 md:px-16" id="laserzuschnitt">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
+        <div class="col-span-6 text-xl">
+            <h2 class="mb-8">Laserzuschnitt</h2>
+            <p class="mb-8 text-justify md:text-left">
+                Unser vollautomatisierter 2D-Fiber-Laser TruLaser 3030
+                der Marke TRUMPF schneidet von Baustahl über Edelstahl bis
+                hin zu hoch reflektiven Materialien wie Kupfer und
+                Aluminium. Wir lasern Bleche in Großformat, Mittelformat
+                und Kleinformat
+            </p>
+            <p>
+                <h3>Blechstärken:</h3>
+                <ul class="max-w-sm">
+                    <li class="flex justify-between"><div>Stahl</div><div>25 mm</div></li>
+                    <li class="flex justify-between"><div>Edelstahl</div><div>25 mm</div></li>
+                    <li class="flex justify-between"><div>Aluminium</div><div>25 mm</div></li>
+                    <li class="flex justify-between"><div>Kupfer</div><div>10 mm</div></li>
+                    <li class="flex justify-between"><div>Messing</div><div>10 mm</div></li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-span-6 md:px-8" id="laserzuschnitt-gallery">
+            {{ $image := .Resources.GetMatch "laserzuschnitt2.webp" }}
+            <a href="{{ $image.RelPermalink }}" data-pswp-width="{{ $image.Width }}" data-pswp-height="{{ $image.Height }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></a>
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                {{ $image2 := .Resources.GetMatch "laserzuschnitt.webp" }}
+                <a href="{{ $image2.RelPermalink }}" data-pswp-width="{{ $image2.Width }}" data-pswp-height="{{ $image2.Height }}">
+                    <div class="h-28 bg-[url(leistungen/laserzuschnitt.webp)] bg-cover bg-center bg-no-repeat"></div>
+                </a>
+                {{ $image3 := .Resources.GetMatch "laserzuschnitt3.webp" }}
+                <a href="{{ $image3.RelPermalink }}" data-pswp-width="{{ $image3.Width }}" data-pswp-height="{{ $image3.Height }}">
+                    <div class="h-28 bg-[url(leistungen/laserzuschnitt3.webp)] bg-cover bg-center bg-no-repeat"></div>
+                </a>
+                {{ $image4 := .Resources.GetMatch "laserzuschnitt4.webp" }}
+                <a href="{{ $image4.RelPermalink }}" data-pswp-width="{{ $image4.Width }}" data-pswp-height="{{ $image4.Height }}">
+                    <div class="h-28 bg-[url(leistungen/laserzuschnitt4.webp)] bg-cover bg-center bg-no-repeat"></div>         
+                </a>      
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="border-black border-1" />
+
+<section class="p-4 md:py-4 md:px-16" id="stanzzuschnitt">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
+        <div class="col-span-6 text-xl">
+            <h2 class="mb-8">Stanzzuschnitt</h2>
+            <p class="mb-8 text-justify md:text-left">
+                Stanzen ist weit mehr als Bleche lochen. Unsere
+                vollautomatisierte Stanzmaschine TruPunch 1000 eröffnet
+                durch die Fülle an Werkzeugmöglichkeiten neue
+                Dimensionen. So können Teile mit zum Beispiel
+                Umformungen oder Gewinden auf einer Maschine komplett gefertigt werden.
+            </p>
+            <ul class="max-w-sm">
+                <li class="flex justify-between"><div>Blechstärken:</div><div>max. 6 mm</div></li>
+            </ul>
+        </div>
+        <div class="col-span-6 md:px-8" id="stanzzuschnitt-gallery">
+            {{ $image := .Resources.GetMatch "stanzzuschnitt1.webp" }}
+            <a href="{{ $image.RelPermalink }}" data-pswp-width="{{ $image.Width }}" data-pswp-height="{{ $image.Height }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></a>
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                {{ $image2 := .Resources.GetMatch "stanzzuschnitt2.webp" }}
+                <a href="{{ $image2.RelPermalink }}" data-pswp-width="{{ $image2.Width }}" data-pswp-height="{{ $image2.Height }}">
+                    <div class="h-28 bg-[url(leistungen/stanzzuschnitt2.webp)] bg-cover bg-center bg-no-repeat"></div>
+                </a>
+                {{ $image3 := .Resources.GetMatch "stanzzuschnitt3.webp" }}
+                <a href="{{ $image3.RelPermalink }}" data-pswp-width="{{ $image3.Width }}" data-pswp-height="{{ $image3.Height }}">
+                    <div class="h-28 bg-[url(leistungen/stanzzuschnitt3.webp)] bg-cover bg-center bg-no-repeat"></div>
+                </a>
+                {{ $image4 := .Resources.GetMatch "stanzzuschnitt4.webp" }}
+                <a href="{{ $image4.RelPermalink }}" data-pswp-width="{{ $image4.Width }}" data-pswp-height="{{ $image4.Height }}">
+                    <div class="h-28 bg-[url(leistungen/stanzzuschnitt4.webp)] bg-cover bg-center bg-no-repeat"></div>         
+                </a>      
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="border-black border-1" />
+
+<section class="p-4 md:py-4 md:px-16" id="abkanten">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full mb-8 md:mb-16">
+        <div class="col-span-6 text-xl">
+            <h2 class="mb-8">Abkanten</h2>
+            <p class="mb-8 text-justify md:text-left">
+                Unsere TrumaBend V130X bringt ihre Blechteile in Form.
+                Egal ob einfache Geometrie oder komplexe Präzisionsteile.
+            </p>
+            <p>
+                <ul class="max-w-sm">
+                    <li class="flex justify-between"><div>Max. Kantlänge:</div><div>3 m</div></li>
+                    <li class="flex justify-between"><div>Max. Presskraft:</div><div>130 t</div></li>
+                </ul>
+            </p>
+        </div>
+        <div class="col-span-6 md:px-8" id="abkanten-gallery">
+            {{ $image := .Resources.GetMatch "abkanten1.webp" }}
+            <a href="{{ $image.RelPermalink }}" data-pswp-width="{{ $image.Width }}" data-pswp-height="{{ $image.Height }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></a>
+            <div class="grid grid-cols-3 gap-2 mt-2">
+                {{ $image2 := .Resources.GetMatch "abkanten2.webp" }}
+                <a href="{{ $image2.RelPermalink }}" data-pswp-width="{{ $image2.Width }}" data-pswp-height="{{ $image2.Height }}">
+                    <div class="h-28 bg-[url(leistungen/abkanten2.webp)] bg-cover bg-center bg-no-repeat"></div>
+                </a>
+                {{ $image3 := .Resources.GetMatch "abkanten3.webp" }}
+                <a href="{{ $image3.RelPermalink }}" data-pswp-width="{{ $image3.Width }}" data-pswp-height="{{ $image3.Height }}">
+                    <div class="h-28 bg-[url(leistungen/abkanten3.webp)] bg-cover bg-center bg-no-repeat"></div>
+                </a>
+                {{ $image4 := .Resources.GetMatch "abkanten4.webp" }}
+                <a href="{{ $image4.RelPermalink }}" data-pswp-width="{{ $image4.Width }}" data-pswp-height="{{ $image4.Height }}">
+                    <div class="h-28 bg-[url(leistungen/abkanten4.webp)] bg-cover bg-center bg-no-repeat"></div>         
+                </a>      
+            </div>
+        </div>
+    </div>
+</section>
+
+{{- partial "knowEachOther.html" . -}}
+
+{{ end }}

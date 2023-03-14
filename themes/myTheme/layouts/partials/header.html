@@ -1,0 +1,19 @@
+<header class="bg-white grid grid-cols-12 gap-4 md:gap-8 p-4 lg:py-4 lg:px-16 text-2xl md:text-3xl lg:text-4xl md:h-40 lg:h-56 xl:h-72">
+    <div class="col-span-2">
+        <a href="{{ .Site.BaseURL }}"><img class="max-h-40" src="{{ .Site.BaseURL }}/img/logo.png" alt="{{ .Site.Title }} Logo" /></a>
+    </div>
+    <div class="col-span-5 md:col-span-3">
+        <h1 class="leading-5.5 md:leading-8">EBNER<br />Blechtechnik</h1>
+    </div>
+    <div class="leading-5.5 md:leading-8 col-span-5 md:col-span-3 flex justify-end">Cuttin'<br />Perfection</div>
+    <nav class="leading-5.5 md:leading-8 mt-2 md:mt-8 lg:mt-0 col-span-12 md:col-span-4 flex justify-end">
+        <ul class="flex text-xl">
+            {{ $currentPage := . -}}
+            {{ range .Site.Menus.nav -}}
+            <li class="mr-6">
+                <a href="{{ .URL | relLangURL }}" {{ if eq $currentPage . }} class="nav-link underline" aria-current="page" {{ end }}>{{ .Name }}</a>
+            </li>
+            {{ end -}}
+        </ul>
+    </nav>
+</header>
