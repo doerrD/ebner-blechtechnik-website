@@ -18,7 +18,10 @@ HUGO_ENABLEGITINFO = "true"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Strict-Transport-Security = '''
+      max-age=63072000;
+      includeSubDomains;
+      preload'''
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline';"
     Referrer-Policy = "no-referrer-when-downgrade"
