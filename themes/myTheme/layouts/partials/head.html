@@ -13,7 +13,7 @@
 
     {{ $styles := resources.Get "style.css" | fingerprint }}
     {{ if eq hugo.Environment "production" }}
-        {{ $styles := resources.Get "style.min.css" | fingerprint }}
+        {{ $styles = resources.Get "style.min.css" | fingerprint }}
     {{ end }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
 
