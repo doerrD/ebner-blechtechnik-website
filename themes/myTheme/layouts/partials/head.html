@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/js/photoswipe/photoswipe.css">
 
     {{ $styles := resources.Get "style.css" | fingerprint }}
+    {{ hugo.Environment }}
     {{ if eq hugo.Environment "production" }}
         {{ $styles := resources.Get "style.min.css" | fingerprint }}
     {{ end }}
