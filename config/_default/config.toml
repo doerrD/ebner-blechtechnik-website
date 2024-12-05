@@ -22,6 +22,10 @@ theme = 'myTheme'
     url = "/UeberUns"
     weight = 2
   [[menu.nav]]
+    name = "Jobs"
+    url = "/jobs"
+    weight = 3
+  [[menu.nav]]
     name = "Kontakt"
     url = "/Kontakt"
-    weight = 3
+    weight = 4
